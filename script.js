@@ -111,3 +111,34 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 observer.observe(skillsSection);
+
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const button = form.querySelector('button[type="submit"]');
+  const originalText = button.innerHTML;
+
+  // Show loading state
+  button.disabled = true;
+  button.innerHTML = 'Sending...';
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      alert('Message sent successfully!');
+      form.reset(); // Clear form
+    } else {
+      alert('Failed to send message. Please try again.');
+    }
+  } catch (error) {
+    alert('Network error. Please check your connection.');
+  } finally {
+    button.disabled = false;
+    button.innerHTML = originalText;
+  }
+});
