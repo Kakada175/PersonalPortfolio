@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kakada Chhem - Portfolio</title>
+    <meta name="description" content="I am a passionate web designer with a love for creating beautiful 
+                                     and functional websites. I enjoy working with HTML, CSS, and JavaScript
+                                     to bring ideas to life and enhance user experiences. In my free time, I 
+                                     like to explore new design trends and work on personal projects that challenge my creativity.">
+    <meta name="keywords" content="Kakada Chhem, web design, web developer">
+    <meta name="author" content="Kakada Chhem">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-aos="fade-down">
+        <div class="container">
+            <a class="navbar-brand" href="#home">KAKADA CHHEM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="background-color: #6f34fe;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text col-lg-6" data-aos="fade-left">
+                    <h1>HELLO, I'M <span class="highlight">KAKADA CHHEM</span></h1>
+                    <p class="lead">A junior student at Royal University of Phnom Penh, aspiring web designer and developer.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-lg px-4 me-2">Hire Me</a>
+                        <a href="#projects" class="btn btn-outline-primary btn-lg px-4">My Work</a>
+                    </div>
+                </div>
+
+                <div class="hero-image col-lg-6" data-aos="fade-right">
+                    <img src="./image/profile.png" alt="Profile" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 section-alt">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="./image/profile.png" alt="About" class="img-fluid rounded-circle shadow">
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+                    <h3 style="color: #6f34fe;">I'm KAKADA, a junior student majoring in Computer Science and Engineering.</h3>
+                    <p>I'm a passionate web developer with expertise in front-end and back-end technologies. I love creating interactive and responsive websites that provide great user experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">My Projects</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 shadow">
+                        <img src="./image/netflex.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Netflix Website</h5>
+                            <p class="card-text">The interface mimics Netflix's sleek design, featuring categorized content rows, trailers, and a personalized recommendation system. This clone serves as a practical demonstration of frontend development skills and API integration. Explore the code and demo on GitHub.</p>
+                            <span class="badge bg-primary me-1">HTML</span>
+                            <span class="badge bg-primary me-1">CSS</span>
+                            <span class="badge bg-primary">JavaScript</span>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="https://kakada175.github.io/Netflix/" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 shadow">
+                        <img src="./image/restaurant.png" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurant Website</h5>
+                            <p class="card-text">The restaurant website designed to showcase a dining establishment’s menu, services, and ambiance. Built with HTML, CSS, and JavaScript, the site features a clean, modern layout with sections for food galleries, customer reviews, contact details, and an interactive reservation form. Check out the live demo and code on GitHub.</p>
+                            <span class="badge bg-primary me-1">HTML</span>
+                            <span class="badge bg-primary me-1">CSS</span>
+                            <span class="badge bg-primary">JavaScript</span>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="https://kakada175.github.io/Restaurant.github.io/" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 shadow">
+                        <img src="./image/skincare.png" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Skincare E-commerce Website</h5>
+                            <p class="card-text">The e-commerce site designed for a skincare brand, built with HTML, CSS, and JavaScript. The website features product displays, a shopping cart, customer testimonials, and a contact section. It showcases frontend development skills in UI design, DOM manipulation, and interactive elements. Explore the live demo and code on GitHub Pages.</p>
+                            <span class="badge bg-primary me-1">HTML</span>
+                            <span class="badge bg-primary me-1">CSS</span>
+                            <span class="badge bg-primary">JavaScript</span>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="https://kakada175.github.io/SkincareWebsite/" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 section-alt">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">My Skills</h2>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6>HTML/CSS</h6>
+                            <span class="progress-value" data-target="80">0%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6>JavaScript</h6>
+                            <span class="progress-value" data-target="60">0%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6>React</h6>
+                            <span class="progress-value" data-target="70">0%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6>Java</h6>
+                            <span class="progress-value" data-target="75">0%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6>Docker</h6>
+                            <span class="progress-value" data-target="65">0%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6>Node.js</h6>
+                            <span class="progress-value" data-target="75">0%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6>MySQL</h6>
+                            <span class="progress-value" data-target="80">0%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6>PHP</h6>
+                            <span class="progress-value" data-target="60">0%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6>Laravel</h6>
+                            <span class="progress-value" data-target="50">0%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6>UI/UX Design</h6>
+                            <span class="progress-value" data-target="60">0%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Contact Me</h2>
+            <div class="row">
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-right">
+                    <div class="contact-info">
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fas fa-map-marker-alt me-3 fs-4" style="color: #6f34fe;"></i>
+                            <div>
+                                <h5>Location</h5>
+                                <p>Phnom Penh, Cambodia</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fas fa-envelope me-3 fs-4" style="color: #6f34fe;"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>kakadachhem07@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fas fa-phone me-3 fs-4" style="color: #6f34fe;"></i>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>+855 897 284 99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Phone Number">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <h3 class="mb-4" data-aos="fade-up">Portfolio</h3>
+            <div class="footer-links mb-4" data-aos="fade-up" data-aos-delay="100">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-icons mb-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://linkedin.com/in/YourLinkedInProfile"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Kakada175"><i class="fab fa-github"></i></a>
+            </div>
+            <hr class="my-4 bg-light">
+            <p class="mb-0" data-aos="fade-up" data-aos-delay="300">© 2025 By KAKADA CHHEM | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        
+    </script>
+</body>
+</html>
