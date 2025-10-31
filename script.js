@@ -112,6 +112,7 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(skillsSection);
 
+// Contact form submission handling
 document.getElementById('contactForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   const form = e.target;
