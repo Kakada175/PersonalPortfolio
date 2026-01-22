@@ -84,7 +84,7 @@ This structure guides visitors through my personal brand story and capabilities,
 
 ---
 
-👨‍💻 Author
+👩‍💻 Author
 
 Chhem Kakada
 🎓 Computer Science & Engineering Student
