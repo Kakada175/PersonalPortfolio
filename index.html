@@ -1,380 +1,1182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kakada Chhem - Portfolio</title>
-    <meta name="description" content="I am a passionate web designer with a love for creating beautiful 
-                                     and functional websites. I enjoy working with HTML, CSS, and JavaScript
-                                     to bring ideas to life and enhance user experiences. In my free time, I 
-                                     like to explore new design trends and work on personal projects that challenge my creativity.">
-    <meta name="keywords" content="Kakada Chhem, web design, web developer">
-    <meta name="author" content="Kakada Chhem">
+    <title>Kakada Chhem (ឆែម កក្កដា) | Flutter Mobile Developer</title>
+    <meta name="description" content="Chhem Kakada is an enthusiastic Flutter Mobile Application Developer with expertise in Flutter, Dart, Laravel backend, REST APIs, and modern UI/UX design.">
+    <meta name="keywords" content="Kakada Chhem, Chhem Kakada, Flutter Developer, Mobile App Developer, Dart, Laravel, Android, iOS, Cambodia, Phnom Penh, RUPP">
+    <meta name="author" content="Kakada Chhem (ឆែម កក្កដា)">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Kakada Chhem | Flutter Mobile Application Developer">
+    <meta property="og:description" content="Explore my cross-platform mobile apps in Flutter, backend systems in Laravel, and UI/UX design projects.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-aos="fade-down">
-        <div class="container">
-            <a class="navbar-brand" href="#home">KAKADA CHHEM</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="background-color: #6f34fe;">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                            <i class="fas fa-sun"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Reading Scroll Progress Bar -->
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
 
-    <!-- Home Page -->
-    <section id="home" class="hero">
+    <!-- Ambient Background Lighting -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="header-nav fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container nav-container">
+                <a class="navbar-brand" href="#home">
+                    <span class="brand-code">&lt;</span>CHHEM KAKADA<span class="brand-code">/&gt;</span>
+                </a>
+
+                <div class="d-flex align-items-center order-lg-3 gap-2">
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" title="Toggle Theme">
+                        <i class="fas fa-sun theme-icon-sun"></i>
+                        <i class="fas fa-moon theme-icon-moon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Toggler -->
+                    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-bar bar1"></span>
+                        <span class="toggler-bar bar2"></span>
+                        <span class="toggler-bar bar3"></span>
+                    </button>
+
+                    <a href="#contact" class="btn btn-sm btn-glow d-none d-sm-inline-flex">Hire Me</a>
+                </div>
+
+                <div class="collapse navbar-collapse order-lg-2" id="navbarContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home"><i class="fas fa-home me-1 nav-icon"></i>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about"><i class="fas fa-user me-1 nav-icon"></i>About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience"><i class="fas fa-briefcase me-1 nav-icon"></i>Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects"><i class="fas fa-mobile-screen-button me-1 nav-icon"></i>Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills"><i class="fas fa-layer-group me-1 nav-icon"></i>Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact"><i class="fas fa-paper-plane me-1 nav-icon"></i>Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text col-lg-6" data-aos="fade-left">
-                    <h1>HELLO, I'M <span class="highlight">KAKADA CHHEM</span></h1>
-                    <p class="lead">A senior student at Royal University of Phnom Penh, aspiring web designer and developer.</p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary btn-lg px-4 me-2">Hire Me</a>
-                        <a href="#projects" class="btn btn-outline-primary btn-lg px-4">My Work</a>
+            <div class="row align-items-center min-vh-hero">
+                <!-- Hero Left: Text & CTA -->
+                <div class="col-lg-7 hero-text-col" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="status-badge mb-3">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Available for Flutter Mobile Roles &amp; Freelance</span>
+                    </div>
+
+                    <div class="khmer-tag mb-2">
+                        <span>សួស្តី! ខ្ញុំឈ្មោះ</span> <strong class="text-primary-light">ឆែម កក្កដា</strong>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Chhem Kakada</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle">
+                        I craft <span id="typewriter" class="typewriter-text"></span><span class="cursor">&nbsp;</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        Enthusiastic <strong>Flutter Mobile Application Developer</strong> &amp; Computer Science graduate from <strong>Royal University of Phnom Penh (RUPP)</strong>. Experienced in building smooth Android &amp; iOS cross-platform apps with Dart, integrating RESTful APIs with Laravel &amp; MySQL backends, and crafting intuitive UI/UX.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary btn-lg btn-glow">
+                            <span>View My Projects</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#experience" class="btn btn-outline-custom btn-lg">
+                            <span>My Experience</span>
+                            <i class="fas fa-briefcase ms-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <span class="social-label">Find me on:</span>
+                        <div class="social-links">
+                            <a href="https://github.com/Kakada175" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/kakada-chhem-3b3445318?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.facebook.com/share/1ChKDfekn7/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="mailto:chhemkakada07@gmail.com" aria-label="Email" title="Email Me">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="hero-image col-lg-6" data-aos="fade-right">
-                    <img src="./image/profile3.png" alt="Profile" class="img-fluid">
+                <!-- Hero Right: Professional Visual Card -->
+                <div class="col-lg-5 hero-image-col mt-5 mt-lg-0" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="hero-image-wrapper">
+                        <div class="image-backdrop-glow"></div>
+                        <div class="hero-image-card">
+                            <img src="./image/kakada_profile.jpg" alt="Chhem Kakada - Flutter Mobile Developer" class="hero-avatar">
+                        </div>
+
+                        <!-- Floating Tech Badges -->
+                        <div class="floating-badge badge-flutter" data-aos="zoom-in" data-aos-delay="400">
+                            <i class="fas fa-mobile-screen text-cyan"></i>
+                            <span>Flutter &amp; Dart</span>
+                        </div>
+                        <div class="floating-badge badge-laravel" data-aos="zoom-in" data-aos-delay="500">
+                            <i class="fab fa-laravel text-red"></i>
+                            <span>Laravel Backend</span>
+                        </div>
+                        <div class="floating-badge badge-figma" data-aos="zoom-in" data-aos-delay="600">
+                            <i class="fab fa-figma text-purple"></i>
+                            <span>UI/UX Instructor</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Scroll Indicator Down -->
+        <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About section">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="arrow-down"><i class="fas fa-chevron-down"></i></span>
+        </a>
     </section>
 
-    <!-- About Me -->
-    <section id="about" class="py-5 section-alt">
+    <!-- About Me Section (Bento Grid) -->
+    <section id="about" class="section-padding">
         <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up">About Me</h2>
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <img src="./image/profile3.png" alt="About" class="img-fluid rounded-circle shadow">
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
-                    <h3 style="color: #6f34fe;">I'm KAKADA, a senior student majoring in Computer Science and Engineering.</h3>
-                    <p>I'm a passionate web developer with expertise in front-end and back-end technologies. I love creating interactive and responsive websites that provide great user experiences.</p>
-                </div>
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-tag">Profile Summary</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <div class="title-underline"></div>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects -->
-    <section id="projects" class="py-5">
-        <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up">My Projects</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card h-100 shadow">
-                        <img src="./image/netflex.png" class="card-img-top" alt="Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Netflix Website</h5>
-                            <p class="card-text">The interface mimics Netflix's sleek design, featuring categorized content rows, trailers, and a personalized recommendation system. This clone serves as a practical demonstration of frontend development skills and API integration. Explore the code and demo on GitHub.</p>
-                            <span class="badge bg-primary me-1">HTML</span>
-                            <span class="badge bg-primary me-1">CSS</span>
-                            <span class="badge bg-primary">JavaScript</span>
+            <div class="row g-4 align-items-center">
+                <!-- Left: Bento Card with Image & Quick Tags -->
+                <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+                    <div class="bento-card about-image-card">
+                        <div class="about-avatar-container">
+                            <img src="./image/kakada_profile.jpg" alt="Chhem Kakada" class="about-avatar">
                         </div>
-                        <div class="card-footer bg-transparent">
-                            <a href="https://kakada175.github.io/Netflix/" class="btn btn-primary" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card h-100 shadow">
-                        <img src="./image/restaurant.png" class="card-img-top" alt="Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Restaurant Website</h5>
-                            <p class="card-text">The restaurant website designed to showcase a dining establishment’s menu, services, and ambiance. Built with HTML, CSS, and JavaScript, the site features a clean, modern layout with sections for food galleries, customer reviews, contact details, and an interactive reservation form. Check out the live demo and code on GitHub.</p>
-                            <span class="badge bg-primary me-1">HTML</span>
-                            <span class="badge bg-primary me-1">CSS</span>
-                            <span class="badge bg-primary">JavaScript</span>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <a href="https://kakada175.github.io/Restaurant.github.io/" class="btn btn-primary" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card h-100 shadow">
-                        <img src="./image/skincare.png" class="card-img-top" alt="Project 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Skincare E-commerce Website</h5>
-                            <p class="card-text">The e-commerce site designed for a skincare brand, built with HTML, CSS, and JavaScript. The website features product displays, a shopping cart, customer testimonials, and a contact section. It showcases frontend development skills in UI design, DOM manipulation, and interactive elements. Explore the live demo and code on GitHub Pages.</p>
-                            <span class="badge bg-primary me-1">HTML</span>
-                            <span class="badge bg-primary me-1">CSS</span>
-                            <span class="badge bg-primary">JavaScript</span>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <a href="https://kakada175.github.io/SkincareWebsite/" class="btn btn-primary" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card h-100 shadow">
-                        <img src="./image/fullstackskincare.png" class="card-img-top" alt="Project 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Skincare Website</h5>
-                            <p class="card-text">This project is a full-stack e-commerce website for a skincare brand. The front-end provides a clean and responsive user interface for product browsing. The back-end is powered by PHP and utilizes a MySQL database to manage all product listings, user data, and business logic. Explore the code on GitHub Pages.</p>
-                            <span class="badge bg-primary me-1">HTML</span>
-                            <span class="badge bg-primary me-1">CSS</span>
-                            <span class="badge bg-primary">PHP & MySQL</span>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <a href="https://github.com/Kakada175/SkincareStore.git" class="btn btn-primary" target="_blank">View Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card h-100 shadow">
-                        <img src="./image/Poppy&Pearl.png" class="card-img-top" alt="Project 5">
-                        <div class="card-body">
-                            <h5 class="card-title">Clothing E-commerce Website</h5>
-                            <p class="card-text">This is an full-stack e-commerce website for "Komi," a clothing brand I developed. The project features a minimalist UI/UX and is designed to showcase a curated collection of Korean-inspired apparel, specifically targeting the Gen Z market. Explore the live demo and code on GitHub Pages.</p>
-                            <span class="badge bg-primary me-1">HTML</span>
-                            <span class="badge bg-primary me-1">CSS(Bootstrap)</span>
-                            <span class="badge bg-primary">JavaScript</span>
-                            <span class="badge bg-primary">Node.JS</span>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <a href="https://kakada175.github.io/ClothBrand/" class="btn btn-primary" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card h-100 shadow">
-                        <img src="./image/artory1.png" class="card-img-top" alt="Project 5">
-                        <div class="card-body">
-                            <h5 class="card-title">Art Website</h5>
-                            <p class="card-text">Artory is an online platform dedicated to celebrating Cambodia’s creative spirit — connecting local artists with art lovers and collectors. Through a curated collection of works, Artory showcases both traditional and modern Cambodian art, highlights featured artists, and offers a space where culture, creativity and community converge. Explore the live demo and code on GitHub Pages.</p>
-                            <span class="badge bg-primary me-1">HTML</span>
-                            <span class="badge bg-primary me-1">CSS(Bootstrap)</span>
-                            <span class="badge bg-primary">JavaScript</span>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <a href="https://kakada175.github.io/Artory/" class="btn btn-primary" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="py-5 section-alt">
-        <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up">My Skills</h2>
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6>HTML/CSS</h6>
-                            <span class="progress-value" data-target="65">0%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6>JavaScript</h6>
-                            <span class="progress-value" data-target="50">0%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6>React</h6>
-                            <span class="progress-value" data-target="40">0%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6>Java</h6>
-                            <span class="progress-value" data-target="45">0%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6>Docker</h6>
-                            <span class="progress-value" data-target="60">0%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6>Node.js</h6>
-                            <span class="progress-value" data-target="40">0%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6>MySQL</h6>
-                            <span class="progress-value" data-target="60">0%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6>PHP</h6>
-                            <span class="progress-value" data-target="40">0%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6>Laravel</h6>
-                            <span class="progress-value" data-target="30">0%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6>UI/UX Design</h6>
-                            <span class="progress-value" data-target="45">0%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up">Contact Me</h2>
-            <div class="row">
-                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-right">
-                    <div class="contact-info">
-                        <div class="d-flex align-items-center mb-4">
-                            <i class="fas fa-map-marker-alt me-3 fs-4" style="color: #6f34fe;"></i>
-                            <div>
-                                <h5>Location</h5>
-                                <p>Phnom Penh, Cambodia</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center mb-4">
-                            <i class="fas fa-envelope me-3 fs-4" style="color: #6f34fe;"></i>
-                            <div>
-                                <h5>Email</h5>
-                                <p>kakadachhem07@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center mb-4">
-                            <i class="fas fa-phone me-3 fs-4" style="color: #6f34fe;"></i>
-                            <div>
-                                <h5>Phone</h5>
-                                <p>+855 897 284 99</p>
+                        <div class="about-quick-info mt-3">
+                            <h4 class="mb-1 text-center font-heading">Chhem Kakada <span class="khmer-inline">(ឆែម កក្កដា)</span></h4>
+                            <p class="text-center text-primary-light fw-semibold mb-3">Mobile Application Developer &amp; UI/UX Instructor</p>
+                            <div class="d-flex justify-content-center flex-wrap gap-2">
+                                <span class="tech-chip"><i class="fas fa-map-marker-alt text-danger me-1"></i>Boeung Keng Kang, Phnom Penh</span>
+                                <span class="tech-chip"><i class="fas fa-graduation-cap text-primary me-1"></i>RUPP (CS &amp; Engineering)</span>
+                                <span class="tech-chip"><i class="fas fa-trophy text-warning me-1"></i>YICMG 2026 2nd Prize</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <h5 class="mb-4">Feel free to reach out to me:</h5>
-                    <form id="contactForm" action="https://formspree.io/f/myzplkyp" method="POST">
-                        <div class="mb-4">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+
+                <!-- Right: Detailed Story & Metrics Bento Cards -->
+                <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+                    <div class="bento-card mb-4">
+                        <h3 class="bento-card-title">
+                            <i class="fas fa-mobile-screen-button text-cyan me-2"></i>Cross-Platform Mobile Engineer
+                        </h3>
+                        <p class="about-paragraph">
+                            I am an enthusiastic <strong>Mobile Application Developer</strong> with extensive hands-on experience in building cross-platform applications using <strong>Flutter and Dart</strong>, coupled with robust backend engineering utilizing <strong>Laravel, PHP, and MySQL</strong>.
+                        </p>
+                        <p class="about-paragraph">
+                            I have built real-world mobile applications integrating <strong>RESTful APIs, Google Maps, Push Notifications, Provider state management</strong>, database architecture, authentication, and comprehensive unit/integration testing.
+                        </p>
+                        <p class="about-paragraph mb-0">
+                            Beyond software engineering, I share knowledge as a <strong>UX/UI Design Instructor</strong> at the Royal University of Phnom Penh, mentoring students in Figma, user-centered design systems, and mobile wireframing.
+                        </p>
+                    </div>
+
+                    <!-- Highlight Metrics Bento Grid -->
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="bento-card stat-card">
+                                <div class="stat-icon icon-flutter">
+                                    <i class="fas fa-mobile-screen"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3 class="stat-number">Flutter &amp; Dart</h3>
+                                    <p class="stat-label">Cross-Platform iOS &amp; Android</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-4">
-                            <input type="email" name="_replyto" class="form-control" placeholder="Your Email" required>
+                        <div class="col-sm-6">
+                            <div class="bento-card stat-card">
+                                <div class="stat-icon icon-backend">
+                                    <i class="fab fa-laravel"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3 class="stat-number">Laravel &amp; SQL</h3>
+                                    <p class="stat-label">RESTful APIs &amp; Data Pipeline</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-4">
-                            <input type="text" name="phone" class="form-control" placeholder="Your Phone Number">
+                        <div class="col-sm-6">
+                            <div class="bento-card stat-card">
+                                <div class="stat-icon icon-tools">
+                                    <i class="fas fa-chalkboard-user"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3 class="stat-number">Instructor</h3>
+                                    <p class="stat-label">UI/UX Design at RUPP</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-4">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <div class="col-sm-6">
+                            <div class="bento-card stat-card">
+                                <div class="stat-icon icon-design">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3 class="stat-number">2nd Prize</h3>
+                                    <p class="stat-label">YICMG 2026 (Wuhan, China)</p>
+                                </div>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                    </div>
                 </div>
-                
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience & Achievements Section -->
+    <section id="experience" class="section-padding section-alt">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-tag">Career Journey</span>
+                <h2 class="section-title">Experience &amp; <span class="gradient-text">Achievements</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">A chronicle of my professional work experience, international honors, and education.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Left Column: Work Experience -->
+                <div class="col-lg-7" data-aos="fade-right" data-aos-delay="100">
+                    <h3 class="timeline-heading mb-4">
+                        <i class="fas fa-briefcase text-primary-light me-2"></i>Work Experience
+                    </h3>
+
+                    <div class="timeline-container">
+                        <!-- Experience 1: Freelance Flutter Developer -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card bento-card">
+                                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+                                    <div>
+                                        <h4 class="timeline-role">Freelance Flutter Mobile Application Developer</h4>
+                                        <h5 class="timeline-company"><i class="fas fa-laptop-code me-1 text-cyan"></i>Freelance &bull; Phnom Penh, Cambodia</h5>
+                                    </div>
+                                    <span class="timeline-badge badge-active">Oct 2026 – Present</span>
+                                </div>
+                                <ul class="timeline-points">
+                                    <li>Develop cross-platform mobile applications for <strong>Android and iOS</strong> utilizing <strong>Flutter and Dart</strong>.</li>
+                                    <li>Design and implement responsive, user-friendly mobile application interfaces with smooth transitions.</li>
+                                    <li>Integrate <strong>RESTful APIs</strong> to connect mobile client apps seamlessly with backend services.</li>
+                                    <li>Develop backend functionality using <strong>Laravel, PHP, and MySQL</strong> (authentication, CRUD operations, data schemas).</li>
+                                    <li>Integrate third-party mobile services including <strong>Google Maps SDK</strong> and <strong>push notifications</strong>.</li>
+                                    <li>Perform systematic application testing, debugging, and performance optimization across devices.</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span class="badge-tag">Flutter</span>
+                                    <span class="badge-tag">Dart</span>
+                                    <span class="badge-tag">Laravel</span>
+                                    <span class="badge-tag">REST APIs</span>
+                                    <span class="badge-tag">Google Maps</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience 2: UX/UI Design Instructor -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card bento-card">
+                                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+                                    <div>
+                                        <h4 class="timeline-role">UX/UI Design Instructor</h4>
+                                        <h5 class="timeline-company"><i class="fas fa-university me-1 text-primary-light"></i>Royal University of Phnom Penh (RUPP)</h5>
+                                    </div>
+                                    <span class="timeline-badge badge-active">Mar 2026 – Present</span>
+                                </div>
+                                <ul class="timeline-points">
+                                    <li>Designed and prepared comprehensive UX/UI design course materials and lesson plans.</li>
+                                    <li>Taught students Figma features including <strong>Auto Layout, Components, Variants, and Smart Animate</strong>.</li>
+                                    <li>Guided hands-on design exercises for mobile apps and web platforms using user-centered principles.</li>
+                                    <li>Analyzed UX architectures from leading apps (Google, Apple, Grab, ABA Bank, Telegram).</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span class="badge-tag">Figma</span>
+                                    <span class="badge-tag">Design Systems</span>
+                                    <span class="badge-tag">Prototyping</span>
+                                    <span class="badge-tag">Mentorship</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience 3: ICT Intern -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card bento-card">
+                                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+                                    <div>
+                                        <h4 class="timeline-role">ICT Intern</h4>
+                                        <h5 class="timeline-company"><i class="fas fa-building me-1 text-success"></i>World Vision Cambodia &bull; Phnom Penh</h5>
+                                    </div>
+                                    <span class="timeline-badge">Mar 2026 – Sep 2026</span>
+                                </div>
+                                <ul class="timeline-points">
+                                    <li>Developed mobile applications using <strong>Flutter/Dart</strong> featuring responsive and accessible UI layouts.</li>
+                                    <li>Built backend services and database endpoints with <strong>Laravel, PHP, and MySQL</strong>.</li>
+                                    <li>Created, documented, and tested RESTful APIs bridging frontend and backend logic.</li>
+                                    <li>Implemented secure authentication flows, session handling, and CRUD features.</li>
+                                    <li>Participated in cross-functional debugging, code reviews, and Git/GitHub version control workflows.</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span class="badge-tag">Flutter</span>
+                                    <span class="badge-tag">Laravel</span>
+                                    <span class="badge-tag">MySQL</span>
+                                    <span class="badge-tag">Git / GitHub</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Achievements & Education -->
+                <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
+                    <!-- Achievements -->
+                    <h3 class="timeline-heading mb-4">
+                        <i class="fas fa-trophy text-warning me-2"></i>Honors &amp; Awards
+                    </h3>
+
+                    <div class="bento-card award-card mb-4">
+                        <div class="award-header">
+                            <div class="award-icon-box">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div>
+                                <h4 class="award-title">Second Prize – YICMG 2026</h4>
+                                <p class="award-sub">Youth Innovation Competition on Lancang-Mekong Region's Governance &amp; Development</p>
+                            </div>
+                        </div>
+                        <p class="award-location"><i class="fas fa-map-pin me-1 text-danger"></i>Wuhan, China &bull; Jul 17, 2026</p>
+                        <p class="award-desc">
+                            Represented Royal University of Phnom Penh on the international stage. Presented <strong>CheckFirst</strong>, an AI-powered online scam detection and verification platform, earning <strong>Second Prize</strong> for innovation and safety impact.
+                        </p>
+                    </div>
+
+                    <div class="bento-card award-card mb-4">
+                        <div class="award-header">
+                            <div class="award-icon-box icon-soc">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div>
+                                <h4 class="award-title">Top 5 Outstanding Students</h4>
+                                <p class="award-sub">Website Development and UX/UI Design</p>
+                            </div>
+                        </div>
+                        <p class="award-location"><i class="fas fa-certificate me-1 text-primary-light"></i>Sister of Code &bull; Sep 14, 2025</p>
+                        <p class="award-desc">
+                            Recognized among the Top 5 outstanding developers by Rodionova Natalia, Founder of Sister of Code, for excellence in software architecture and design thinking.
+                        </p>
+                    </div>
+
+                    <!-- Education Card -->
+                    <h3 class="timeline-heading mb-3 mt-4">
+                        <i class="fas fa-graduation-cap text-cyan me-2"></i>Education
+                    </h3>
+                    <div class="bento-card edu-card">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div>
+                                <h4 class="edu-degree">Bachelor of Computer Science &amp; Engineering</h4>
+                                <h5 class="edu-school">Royal University of Phnom Penh (RUPP)</h5>
+                            </div>
+                            <span class="timeline-badge">2023 – 2026</span>
+                        </div>
+                        <p class="text-muted small mb-3">Phnom Penh, Cambodia &bull; Certified June 2026</p>
+                        <ul class="edu-highlights mb-0">
+                            <li>Focus on mobile application development with Flutter/Dart and backend engineering.</li>
+                            <li>Advanced software engineering, database design, REST APIs, and algorithms.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-tag">Featured Portfolio</span>
+                <h2 class="section-title">Mobile &amp; Web <span class="gradient-text">Projects</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Cross-platform mobile apps in Flutter, full-stack systems with Laravel, and interactive web apps.</p>
+            </div>
+
+            <!-- Project Filter Controls -->
+            <div class="project-filters text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="mobile"><i class="fas fa-mobile-screen-button me-1"></i>Flutter Mobile Apps</button>
+                <button class="filter-btn" data-filter="fullstack"><i class="fas fa-server me-1"></i>Full Stack &amp; Backend</button>
+                <button class="filter-btn" data-filter="frontend"><i class="fas fa-laptop-code me-1"></i>Web Frontend</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="row g-4 project-container">
+                <!-- Project 1: DayNest Mobile App (NEW - FLUTTER) -->
+                <div class="col-lg-6 col-md-6 project-item" data-category="mobile" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card featured-project">
+                        <div class="project-image-box mobile-mockup-box app-slider-box" id="daynestSlider">
+                            <!-- Screen 1: Tasks -->
+                            <div class="app-slide active" data-slide="0">
+                                <img src="./image/daynest_app.png" alt="DayNest – Today's Tasks Screen" class="project-img" loading="lazy">
+                                <span class="slide-screen-tag"><i class="fas fa-check-circle me-1 text-warning"></i>Tasks Screen</span>
+                            </div>
+                            <!-- Screen 2: Calendar -->
+                            <div class="app-slide" data-slide="1">
+                                <img src="./image/daynest_calendar.png" alt="DayNest – Calendar &amp; Monthly View" class="project-img" loading="lazy">
+                                <span class="slide-screen-tag"><i class="fas fa-calendar-alt me-1 text-cyan"></i>Calendar Screen</span>
+                            </div>
+                            <!-- Screen 3: Profile & Settings -->
+                            <div class="app-slide" data-slide="2">
+                                <img src="./image/daynest_profile.png" alt="DayNest – Profile &amp; Preferences Screen" class="project-img" loading="lazy">
+                                <span class="slide-screen-tag"><i class="fas fa-user-cog me-1 text-purple"></i>Profile &amp; Settings</span>
+                            </div>
+
+                            <!-- Navigation Arrows -->
+                            <button type="button" class="slider-arrow prev-btn" aria-label="Previous Screen" title="Previous Screen">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button type="button" class="slider-arrow next-btn" aria-label="Next Screen" title="Next Screen">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+
+                            <!-- Pagination Indicators -->
+                            <div class="slider-indicators">
+                                <button type="button" class="indicator-dot active" data-index="0" aria-label="Tasks Screen" title="Tasks Screen"></button>
+                                <button type="button" class="indicator-dot" data-index="1" aria-label="Calendar Screen" title="Calendar Screen"></button>
+                                <button type="button" class="indicator-dot" data-index="2" aria-label="Profile Screen" title="Profile Screen"></button>
+                            </div>
+
+                            <!-- GitHub Overlay -->
+                            <div class="project-overlay">
+                                <div class="overlay-buttons">
+                                    <a href="https://github.com/Kakada175/todolist_app" target="_blank" rel="noopener noreferrer" class="btn-overlay" title="GitHub Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="project-badge badge-flutter-tag"><i class="fas fa-mobile-screen me-1"></i>Flutter &bull; Mobile App</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">DayNest – Daily Planner &amp; Calendar App</h3>
+                            <p class="project-desc">
+                                Cross-platform mobile daily planner and calendar application built in <strong>Flutter and Dart</strong>. Designed with comprehensive task management allowing users to create, edit, complete, and delete daily tasks. Features an interactive calendar with monthly &amp; weekly scheduling views, user authentication with persistent session state, Provider architecture, dynamic light/dark themes, and profile image uploading with smooth UI animations.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="badge-tag">Flutter</span>
+                                <span class="badge-tag">Dart</span>
+                                <span class="badge-tag">Provider State</span>
+                                <span class="badge-tag">Calendar API</span>
+                                <span class="badge-tag">Dark/Light Mode</span>
+                                <span class="badge-tag">Cross-Platform</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/Kakada175/todolist_app" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                                    <span>Explore on GitHub</span>
+                                    <i class="fab fa-github ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Khmer Food App (NEW - FLUTTER + LARAVEL) -->
+                <div class="col-lg-6 col-md-6 project-item" data-category="mobile" data-aos="fade-up" data-aos-delay="150">
+                    <div class="project-card featured-project">
+                        <div class="project-image-box mobile-mockup-box app-slider-box" id="khmerFoodSlider">
+                            <!-- Screen 1: Home Explorer -->
+                            <div class="app-slide active" data-slide="0">
+                                <img src="./image/khmer_food_1.png" alt="Khmer Food Explorer – Home Screen" class="project-img" loading="lazy">
+                                <span class="slide-screen-tag"><i class="fas fa-utensils me-1 text-success"></i>Home Explorer</span>
+                            </div>
+                            <!-- Screen 2: Provinces Heritage -->
+                            <div class="app-slide" data-slide="1">
+                                <img src="./image/khmer_food_2.png" alt="Khmer Food – Provinces &amp; Heritage" class="project-img" loading="lazy">
+                                <span class="slide-screen-tag"><i class="fas fa-map-location-dot me-1 text-warning"></i>Provinces Heritage</span>
+                            </div>
+                            <!-- Screen 3: Recipe Detail -->
+                            <div class="app-slide" data-slide="2">
+                                <img src="./image/khmer_food_3.png" alt="Khmer Food – Fish Amok Recipe Detail" class="project-img" loading="lazy">
+                                <span class="slide-screen-tag"><i class="fas fa-bowl-food me-1 text-danger"></i>Recipe &amp; Story</span>
+                            </div>
+                            <!-- Screen 4: AI Culinary Assistant -->
+                            <div class="app-slide" data-slide="3">
+                                <img src="./image/khmer_food_4.png" alt="Khmer Food – AI Culinary Assistant" class="project-img" loading="lazy">
+                                <span class="slide-screen-tag"><i class="fas fa-wand-magic-sparkles me-1 text-cyan"></i>AI Assistant</span>
+                            </div>
+                            <!-- Screen 5: Profile & Settings -->
+                            <div class="app-slide" data-slide="4">
+                                <img src="./image/khmer_food_5.png" alt="Khmer Food – Profile &amp; Settings" class="project-img" loading="lazy">
+                                <span class="slide-screen-tag"><i class="fas fa-user-cog me-1 text-purple"></i>Profile &amp; Cache</span>
+                            </div>
+
+                            <!-- Navigation Arrows -->
+                            <button type="button" class="slider-arrow prev-btn" aria-label="Previous Screen" title="Previous Screen">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button type="button" class="slider-arrow next-btn" aria-label="Next Screen" title="Next Screen">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+
+                            <!-- Pagination Indicators -->
+                            <div class="slider-indicators">
+                                <button type="button" class="indicator-dot active" data-index="0" aria-label="Home Screen" title="Home Screen"></button>
+                                <button type="button" class="indicator-dot" data-index="1" aria-label="Provinces Screen" title="Provinces Screen"></button>
+                                <button type="button" class="indicator-dot" data-index="2" aria-label="Recipe Screen" title="Recipe Screen"></button>
+                                <button type="button" class="indicator-dot" data-index="3" aria-label="AI Assistant" title="AI Assistant"></button>
+                                <button type="button" class="indicator-dot" data-index="4" aria-label="Profile Screen" title="Profile Screen"></button>
+                            </div>
+
+                            <!-- GitHub Overlay -->
+                            <div class="project-overlay">
+                                <div class="overlay-buttons">
+                                    <a href="https://github.com/Kakada175/khmer_food_app" target="_blank" rel="noopener noreferrer" class="btn-overlay" title="GitHub Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="project-badge badge-laravel-tag"><i class="fas fa-utensils me-1"></i>Flutter + Laravel API</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Khmer Food Mobile App</h3>
+                            <p class="project-desc">
+                                Full-stack mobile application developed using <strong>Flutter and Dart</strong> on the mobile frontend, powered by <strong>Laravel, PHP, and MySQL</strong> on the backend. Tested core app functionalities including food catalog browsing, interactive cart, data retrieval, and CRUD operations via verified RESTful APIs. Implemented with clean architecture and Git version control.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="badge-tag">Flutter</span>
+                                <span class="badge-tag">Dart</span>
+                                <span class="badge-tag">Laravel</span>
+                                <span class="badge-tag">PHP &amp; MySQL</span>
+                                <span class="badge-tag">RESTful API</span>
+                                <span class="badge-tag">CRUD</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/Kakada175/khmer_food_app" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                                    <span>Explore on GitHub</span>
+                                    <i class="fab fa-github ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Full Stack Skincare Store -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="fullstack" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image-box">
+                            <img src="./image/fullstackskincare.png" alt="Full Stack Skincare Store" class="project-img" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="overlay-buttons">
+                                    <a href="https://github.com/Kakada175/SkincareStore.git" target="_blank" rel="noopener noreferrer" class="btn-overlay" title="Source Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="project-badge">Full Stack Web</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Skincare Store (Full-Stack)</h3>
+                            <p class="project-desc">
+                                End-to-end e-commerce store with PHP backend and MySQL database. Handles user authentication, session cart, catalog schemas, and orders.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="badge-tag">PHP</span>
+                                <span class="badge-tag">MySQL</span>
+                                <span class="badge-tag">HTML5/CSS3</span>
+                                <span class="badge-tag">Database</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/Kakada175/SkincareStore.git" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                                    <span>View Repository</span>
+                                    <i class="fab fa-github ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Puppy & Pearl Clothing Brand -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="fullstack" data-aos="fade-up" data-aos-delay="250">
+                    <div class="project-card">
+                        <div class="project-image-box">
+                            <img src="./image/Poppy&Pearl.png" alt="Puppy &amp; Pearl Apparel Brand" class="project-img" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="overlay-buttons">
+                                    <a href="https://kakada175.github.io/ClothBrand/" target="_blank" rel="noopener noreferrer" class="btn-overlay" title="Live Preview">
+                                        <i class="fas fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                    <a href="https://github.com/Kakada175" target="_blank" rel="noopener noreferrer" class="btn-overlay" title="GitHub Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="project-badge">Puppy &amp; Pearl</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Puppy &amp; Pearl E-commerce</h3>
+                            <p class="project-desc">
+                                Minimalist Gen Z apparel brand platform featuring curated fashion collections, product showcases, size selection, and responsive interactive design.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="badge-tag">Bootstrap 5</span>
+                                <span class="badge-tag">JavaScript</span>
+                                <span class="badge-tag">Node.js</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://kakada175.github.io/ClothBrand/" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                                    <span>Live Demo</span>
+                                    <i class="fas fa-external-link-alt ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Project 6: Artory Cambodian Art -->
+                <div class="col-lg-4 col-md-6 project-item" data-category="frontend" data-aos="fade-up" data-aos-delay="350">
+                    <div class="project-card">
+                        <div class="project-image-box">
+                            <img src="./image/artory1.png" alt="Artory Cambodian Art Platform" class="project-img" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="overlay-buttons">
+                                    <a href="https://kakada175.github.io/Artory/" target="_blank" rel="noopener noreferrer" class="btn-overlay" title="Live Preview">
+                                        <i class="fas fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                    <a href="https://github.com/Kakada175" target="_blank" rel="noopener noreferrer" class="btn-overlay" title="GitHub Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="project-badge">Art Platform</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Artory - Art Community</h3>
+                            <p class="project-desc">
+                                Celebrating Cambodian culture and artistry, connecting local artists with art lovers through curated galleries and digital storytelling.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="badge-tag">Bootstrap 5</span>
+                                <span class="badge-tag">JavaScript</span>
+                                <span class="badge-tag">Creative UI</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://kakada175.github.io/Artory/" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+                                    <span>Live Demo</span>
+                                    <i class="fas fa-external-link-alt ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Technologies Section -->
+    <section id="skills" class="section-padding section-alt">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-tag">Technical Competencies</span>
+                <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Core proficiencies based on real-world development, production projects, and coursework.</p>
+            </div>
+
+            <!-- Categorized Skills Grid -->
+            <div class="row g-4">
+                <!-- Category 1: Flutter & Mobile Application Development (PRIMARY FOCUS) -->
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                    <div class="bento-card skill-group-card">
+                        <div class="skill-group-header">
+                            <div class="skill-icon-wrap icon-flutter">
+                                <i class="fas fa-mobile-screen"></i>
+                            </div>
+                            <div>
+                                <h4 class="skill-group-title">Flutter &amp; Mobile Development</h4>
+                                <p class="skill-group-desc">Cross-platform Android &amp; iOS mobile engineering with Dart</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags-grid">
+                            <div class="skill-chip">
+                                <i class="fas fa-mobile-screen text-cyan"></i>
+                                <span>Flutter</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-code text-blue"></i>
+                                <span>Dart</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-bolt text-yellow"></i>
+                                <span>Provider State</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-map-location-dot text-green"></i>
+                                <span>Google Maps API</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-bell text-purple"></i>
+                                <span>Push Notifications</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-vial text-teal"></i>
+                                <span>App Testing &amp; Debug</span>
+                            </div>
+                        </div>
+
+                        <!-- Progress Indicators (Aligned with CV: Flutter 80%) -->
+                        <div class="skill-meters mt-4">
+                            <div class="skill-meter-row">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="meter-name">Flutter &amp; Dart Mobile Development</span>
+                                    <span class="meter-val">80%</span>
+                                </div>
+                                <div class="meter-track">
+                                    <div class="meter-bar" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-meter-row">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="meter-name">State Management &amp; REST Client</span>
+                                    <span class="meter-val">75%</span>
+                                </div>
+                                <div class="meter-track">
+                                    <div class="meter-bar" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-meter-row">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="meter-name">Cross-Platform UI / Material 3</span>
+                                    <span class="meter-val">80%</span>
+                                </div>
+                                <div class="meter-track">
+                                    <div class="meter-bar" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Backend & Database (Laravel 70%, Database 60%) -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="bento-card skill-group-card">
+                        <div class="skill-group-header">
+                            <div class="skill-icon-wrap icon-backend">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div>
+                                <h4 class="skill-group-title">Backend Architecture &amp; Database</h4>
+                                <p class="skill-group-desc">RESTful APIs, session authentication, and relational schemas</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags-grid">
+                            <div class="skill-chip">
+                                <i class="fab fa-laravel text-red"></i>
+                                <span>Laravel</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fab fa-php text-indigo"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-database text-blue"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-network-wired text-cyan"></i>
+                                <span>RESTful APIs</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-shield-halved text-green"></i>
+                                <span>Auth &amp; CRUD</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fab fa-node-js text-green"></i>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+
+                        <!-- Progress Indicators (Aligned with CV: Laravel 70%, DB 60%) -->
+                        <div class="skill-meters mt-4">
+                            <div class="skill-meter-row">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="meter-name">Laravel Backend Development</span>
+                                    <span class="meter-val">70%</span>
+                                </div>
+                                <div class="meter-track">
+                                    <div class="meter-bar" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-meter-row">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="meter-name">Database Management (MySQL)</span>
+                                    <span class="meter-val">60%</span>
+                                </div>
+                                <div class="meter-track">
+                                    <div class="meter-bar" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-meter-row">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="meter-name">RESTful API Design &amp; Integration</span>
+                                    <span class="meter-val">75%</span>
+                                </div>
+                                <div class="meter-track">
+                                    <div class="meter-bar" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: UX/UI Design (CV: 70%) -->
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
+                    <div class="bento-card skill-group-card">
+                        <div class="skill-group-header">
+                            <div class="skill-icon-wrap icon-design">
+                                <i class="fas fa-wand-magic-sparkles"></i>
+                            </div>
+                            <div>
+                                <h4 class="skill-group-title">UX/UI Design &amp; Instruction</h4>
+                                <p class="skill-group-desc">User-centered mobile interfaces, Figma systems, and wireframing</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags-grid">
+                            <div class="skill-chip">
+                                <i class="fab fa-figma text-purple"></i>
+                                <span>Figma</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-layer-group text-cyan"></i>
+                                <span>Auto Layout</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-cubes text-yellow"></i>
+                                <span>Components &amp; Variants</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-play text-green"></i>
+                                <span>Smart Animate</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-border-all text-blue"></i>
+                                <span>Wireframing</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-users text-teal"></i>
+                                <span>User Research</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-meters mt-4">
+                            <div class="skill-meter-row">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="meter-name">UX/UI Design &amp; Prototyping (Figma)</span>
+                                    <span class="meter-val">70%</span>
+                                </div>
+                                <div class="meter-track">
+                                    <div class="meter-bar" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-meter-row">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="meter-name">Mobile Interaction &amp; Responsive Layout</span>
+                                    <span class="meter-val">75%</span>
+                                </div>
+                                <div class="meter-track">
+                                    <div class="meter-bar" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Professional Workflow & Languages (CV: Git 80%, Problem Solving 80%, Teamwork 80%) -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="bento-card skill-group-card">
+                        <div class="skill-group-header">
+                            <div class="skill-icon-wrap icon-tools">
+                                <i class="fas fa-screwdriver-wrench"></i>
+                            </div>
+                            <div>
+                                <h4 class="skill-group-title">DevOps, Workflow &amp; Languages</h4>
+                                <p class="skill-group-desc">Version control, collaborative delivery, and language proficiencies</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags-grid">
+                            <div class="skill-chip">
+                                <i class="fab fa-git-alt text-orange"></i>
+                                <span>Git &amp; GitHub</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-lightbulb text-yellow"></i>
+                                <span>Problem Solving</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-people-group text-cyan"></i>
+                                <span>Team Work</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-language text-purple"></i>
+                                <span>Khmer (Native)</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-globe text-blue"></i>
+                                <span>English (Advanced)</span>
+                            </div>
+                            <div class="skill-chip">
+                                <i class="fas fa-comments text-teal"></i>
+                                <span>Chinese (Beginner)</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-meters mt-4">
+                            <div class="skill-meter-row">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="meter-name">Git &amp; Collaborative Version Control</span>
+                                    <span class="meter-val">80%</span>
+                                </div>
+                                <div class="meter-track">
+                                    <div class="meter-bar" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-meter-row">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="meter-name">Problem Solving &amp; Debugging</span>
+                                    <span class="meter-val">80%</span>
+                                </div>
+                                <div class="meter-track">
+                                    <div class="meter-bar" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-tag">Direct Communication</span>
+                <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Interested in collaborating on a Flutter mobile app, backend project, or hiring me? Let's discuss!</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Left: Contact Information Cards -->
+                <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+                    <div class="bento-card contact-info-card h-100">
+                        <h3 class="bento-card-title mb-4">Contact Information</h3>
+                        <p class="text-muted mb-4">
+                            Feel free to reach out via email, phone, or LinkedIn. I am based in Phnom Penh and open to remote and local opportunities.
+                        </p>
+
+                        <div class="contact-methods">
+                            <!-- Location -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Location</span>
+                                    <p class="contact-value">Khan Boeung Keng Kang, Phnom Penh, Cambodia</p>
+                                </div>
+                            </div>
+
+                            <!-- Email (From CV) -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:chhemkakada07@gmail.com" class="contact-link">chhemkakada07@gmail.com</a>
+                                    <button class="copy-btn ms-2" data-copy="chhemkakada07@gmail.com" title="Copy email address" aria-label="Copy Email">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Phone (From CV) -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Phone</span>
+                                    <a href="tel:+85589728499" class="contact-link">+855 89 728 499 (089728499)</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="contact-divider">
+
+                        <div class="contact-social-footer">
+                            <span class="d-block mb-3 text-muted">Connect on Social Platforms:</span>
+                            <div class="social-links">
+                                <a href="https://github.com/Kakada175" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/kakada-chhem-3b3445318?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/share/1ChKDfekn7/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="mailto:chhemkakada07@gmail.com" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Clean Contact Form -->
+                <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+                    <div class="bento-card contact-form-card">
+                        <h3 class="bento-card-title mb-2">Send a Message</h3>
+                        <p class="text-muted mb-4">Fill out the form below and I will respond promptly.</p>
+
+                        <form id="contactForm" action="https://formspree.io/f/myzplkyp" method="POST" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" name="name" class="form-control" id="formName" placeholder="Your Name" required>
+                                        <label for="formName"><i class="fas fa-user me-1 text-muted"></i>Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" name="_replyto" class="form-control" id="formEmail" placeholder="name@example.com" required>
+                                        <label for="formEmail"><i class="fas fa-envelope me-1 text-muted"></i>Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="tel" name="phone" class="form-control" id="formPhone" placeholder="+855 000 000">
+                                        <label for="formPhone"><i class="fas fa-phone me-1 text-muted"></i>Phone Number (Optional)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" name="message" id="formMessage" placeholder="Leave a message here" style="height: 150px" required></textarea>
+                                        <label for="formMessage"><i class="fas fa-comment-dots me-1 text-muted"></i>Your Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-glow w-100" id="submitBtn">
+                                        <span class="btn-text">Send Message</span>
+                                        <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <h3 class="mb-4" data-aos="fade-up">KAKADA CHHEM</h3>
-            <div class="footer-links mb-4" data-aos="fade-up" data-aos-delay="100">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top row align-items-center gy-4">
+                <div class="col-md-4 text-center text-md-start">
+                    <a class="footer-brand" href="#home">
+                        <span class="brand-code">&lt;</span>CHHEM KAKADA<span class="brand-code">/&gt;</span>
+                    </a>
+                    <p class="footer-tagline mt-2">Flutter Mobile Application Developer &bull; Laravel Backend &bull; UX/UI Design Instructor</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="footer-nav">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <div class="footer-socials">
+                        <a href="https://github.com/Kakada175" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/kakada-chhem-3b3445318?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/share/1ChKDfekn7/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="mailto:chhemkakada07@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="social-icons mb-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://linkedin.com/in/YourLinkedInProfile"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/Kakada175"><i class="fab fa-github"></i></a>
+            <hr class="footer-divider">
+            <div class="footer-bottom text-center">
+                <p class="copyright-text mb-0">
+                    &copy; <span id="currentYear"></span> <strong>Chhem Kakada (ឆែម កក្កដា)</strong>. All Rights Reserved.
+                </p>
             </div>
-            <hr class="my-4 bg-light">
-            <p class="mb-0" data-aos="fade-up" data-aos-delay="300">© 2025 By KAKADA CHHEM | All Rights Reserved.</p>
         </div>
     </footer>
 
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to Top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
+    <!-- Custom Floating Toast Alert -->
+    <div id="toastNotification" class="toast-notification" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-icon" id="toastIcon"><i class="fas fa-check-circle"></i></div>
+        <div class="toast-body" id="toastMessage">Message sent successfully!</div>
+    </div>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <script>
-        // Initialize AOS animations
-        AOS.init({
-            duration: 800,
-            once: true
-        });    
-    </script>
 </body>
 </html>
